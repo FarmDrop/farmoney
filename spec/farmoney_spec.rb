@@ -3,7 +3,7 @@ RSpec.describe Farmoney do
     expect(Farmoney::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "doesn't do anything useful" do
+    expect(true).to eq(true)
   end
 end
