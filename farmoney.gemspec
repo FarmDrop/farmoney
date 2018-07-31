@@ -1,5 +1,6 @@
+# frozen_string_literal: true
 
-lib = File.expand_path("../lib", __FILE__)
+lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "farmoney/version"
 
@@ -9,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Tom Chipchase"]
   spec.email         = ["tom@git.tomchipchase.co.uk"]
 
-  spec.summary       = %q{Value objects to help dealing with financial things}
+  spec.summary       = "Value objects to help dealing with financial things"
   spec.homepage      = "https://github.com/FarmDrop/farmoney"
   spec.license       = "MIT"
 

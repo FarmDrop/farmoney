@@ -36,6 +36,25 @@ module Farmoney
     def *(other)
       Money.new(pence * other)
     end
+
+    def lt(other)
+      pence < other.pence
+    end
+
+    def gt(other)
+      pence > other.pence
+    end
+
+    def eq(other)
+      pence == other.pence
+    end
+
+    def lteq(other)
+      lt(other) || eq(other)
+    end
+
+    def gteq(other)
+      gt(other) || eq(other)
+    end
   end
 end
-

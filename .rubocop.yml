@@ -1,0 +1,74 @@
+Style/Documentation:
+  Enabled: false
+
+LineLength:
+   Max: 80
+
+Rails:
+  Enabled: true
+
+AllCops:
+  TargetRubyVersion: "2.5"
+  Exclude:
+    - "bin/**/*"
+    - "db/schema.rb"
+    - "db/seeds.rb"
+    - "node_modules/**/*"
+    - "spec/spec_helper.rb"
+    - "spec/rails_helper.rb"
+    - "config/**/*"
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Style/AccessModifierDeclarations:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: "double_quotes"
+
+Style/BlockDelimiters:
+  Exclude:
+    - "spec/**/*"
+
+# DSLs are allowed long blocks.
+Metrics/BlockLength:
+  Exclude:
+    - "Guardfile"
+    - "spec/**/*"
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/AlignHash:
+  EnforcedLastArgumentHashStyle: ignore_implicit
+
+Metrics/MethodLength:
+  Exclude:
+    - "db/migrate/*"
+
+Metrics/AbcSize:
+  Exclude:
+    - "db/migrate/*"
