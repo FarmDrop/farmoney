@@ -20,17 +20,13 @@ module Farmoney
       format("£%.1i.%.2i", pounds, pence)
     end
 
-    def to_hash
-      attributes
+    def attributes
+      instance_variables.each.with_object({}) do |attribute, hash|
+        hash[attribute_name(attribute)] = instance_variable_get(attribute)
+      end
     end
 
-    def attributes
-      instance_variables.map do |attribute|
-        name = attribute_name(attribute)
-        value = instance_variable_get(attribute)
-        [name, value]
-      end.to_h
-    end
+    alias to_hash attributes
 
     def +(other)
       Money.new(pence + other.pence)
