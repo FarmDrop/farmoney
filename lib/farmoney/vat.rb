@@ -11,7 +11,7 @@ module Farmoney
     end
 
     def initialize(rate, precision: 2)
-      @rate = BigDecimal.new(rate, precision)
+      @rate = BigDecimal(rate, precision)
       super(@rate)
     end
 
